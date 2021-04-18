@@ -267,8 +267,15 @@ tasks:
     ref: 533feffa1f9be9592040fcf8b5233b11785af10a
     dest: ./resources/pma-voice
 
-
-
+  ## pma-voice
+  - action: download_github
+    src: https://github.com/FiveEYZ/esx_kashacter
+    ref: a64596ac3c76038a569f32fc6b88c9f9fb87e0c8
+    dest: ./tmp/esx_kashacter
+  - action: move_path
+    src: ./tmp/esx_kashacter/esx_kashacters
+    dest: ./resources/esx_kashacters
+    
   ## Final touches
   - action: replace_string
     mode: all_vars

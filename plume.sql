@@ -743,6 +743,12 @@ INSERT INTO `weashops` (`id`, `zone`, `item`, `price`) VALUES
 	(38, 'BlackWeashop', 'WEAPON_MINIGUN', 45000),
 	(39, 'BlackWeashop', 'WEAPON_RAILGUN', 50000),
 	(40, 'BlackWeashop', 'WEAPON_STICKYBOMB', 500);
+
+	CREATE TABLE `user_lastcharacter` (
+  `license` varchar(255) NOT NULL,
+  `charid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+COMMIT;
 /*!40000 ALTER TABLE `weashops` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

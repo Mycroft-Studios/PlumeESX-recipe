@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `phone_app_chat` (
 -- Export de la structure de la table gtarp. phone_calls
 CREATE TABLE IF NOT EXISTS `phone_calls` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `owner` varchar(10) NOT NULL COMMENT 'Num tel proprio',
+  `owner` varchar(60) NOT NULL COMMENT 'Num tel proprio',
   `num` varchar(10) NOT NULL COMMENT 'Num reférence du contact',
   `incoming` int(11) NOT NULL COMMENT 'Défini si on est à l''origine de l''appels',
   `time` timestamp NOT NULL DEFAULT current_timestamp(),
@@ -39,12 +39,12 @@ CREATE TABLE IF NOT EXISTS `phone_calls` (
 -- Export de la structure de la table gtarp. phone_messages
 CREATE TABLE IF NOT EXISTS `phone_messages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `transmitter` varchar(10) NOT NULL,
-  `receiver` varchar(10) NOT NULL,
+  `transmitter` varchar(60) NOT NULL,
+  `receiver` varchar(60) NOT NULL,
   `message` varchar(255) NOT NULL DEFAULT '0',
   `time` timestamp NOT NULL DEFAULT current_timestamp(),
   `isRead` int(11) NOT NULL DEFAULT 0,
-  `owner` int(11) NOT NULL DEFAULT 0,
+  `owner` varchar(60) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=106 DEFAULT CHARSET=utf8;
 
