@@ -269,13 +269,17 @@ tasks:
 
   ## pma-voice
   - action: download_github
-    src: https://github.com/FiveEYZ/esx_kashacter
-    ref: a64596ac3c76038a569f32fc6b88c9f9fb87e0c8
+    src: https://github.com/Mycroft-Studios/esx_kashacter
+    ref: eb7b6682bb1af9fba965320697aee65efbe95177
     dest: ./tmp/esx_kashacter
   - action: move_path
     src: ./tmp/esx_kashacter/esx_kashacters
     dest: ./resources/esx_kashacters
-    
+  - action: replace_string
+    file: ./resources/esx_kashacters/config.lua
+    search: 'Config.databaseName = "Changeme"'
+    replace: 'Config.databaseName = "{{deploymentID}}"'
+
   ## Final touches
   - action: replace_string
     mode: all_vars
