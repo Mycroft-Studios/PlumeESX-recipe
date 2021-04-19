@@ -152,6 +152,11 @@ INSERT INTO `datastore_data` (`id`, `name`, `owner`, `data`) VALUES
 	(4, 'society_taxi', NULL, '{}');
 /*!40000 ALTER TABLE `datastore_data` ENABLE KEYS */;
 
+	CREATE TABLE `user_lastcharacter` (
+  `license` varchar(255) NOT NULL,
+  `charid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- Dumping structure for table dep_keep.items
 CREATE TABLE IF NOT EXISTS `items` (
   `name` varchar(50) NOT NULL,
@@ -744,11 +749,6 @@ INSERT INTO `weashops` (`id`, `zone`, `item`, `price`) VALUES
 	(39, 'BlackWeashop', 'WEAPON_RAILGUN', 50000),
 	(40, 'BlackWeashop', 'WEAPON_STICKYBOMB', 500);
 
-	CREATE TABLE `user_lastcharacter` (
-  `license` varchar(255) NOT NULL,
-  `charid` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-COMMIT;
 /*!40000 ALTER TABLE `weashops` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
