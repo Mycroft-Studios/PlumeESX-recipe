@@ -13,7 +13,7 @@ tasks:
     dest: ./tmp/s-esx
 
   - action: move_path
-    -src: ./tmp/s-esx/server.cfg
+    src: ./tmp/s-esx/server.cfg
     dest: ./server.cfg
   
   - action: move_path
