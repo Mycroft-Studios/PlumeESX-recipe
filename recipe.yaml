@@ -14,8 +14,8 @@ tasks:
   
   # Download and prepare server.cfg / loadingscreen / database
   - action: download_github
-    src: https://github.com/tabarra/PlumeESX-recipe
-    ref: main
+    src: https://github.com/Mycroft-Studios/PlumeESX-recipe
+    ref: test
     dest: ./tmp/plume_esx
 
   - action: move_path
